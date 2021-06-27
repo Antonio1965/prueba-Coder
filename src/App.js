@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Footer from './components/Footer';
+import RedeSociales from './components/RedesSociales/RedesSociales';
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <NavBar title='Drone.Co'/>
+     <ItemListContainer greeting='Bienvenidos a la sala de productos!!'/>
+     <RedeSociales/>
+     <Footer autor='Copyright &copy; -Tsutsumi Jose Antonio - Junio 2021.'/>
     </div>
+    </>
   );
 }
 
