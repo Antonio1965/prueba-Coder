@@ -1,35 +1,41 @@
-import './RedesSociales.css';
+import "./RedesSociales.css";
 
-const RedesSociales = () =>{
-    return(
+const RedesSociales = () => {
+  return (
     <div className="main center">
-        <ul className="social-icons">
-            <li><a href="#"><i className="fab fa.fw fa-facebook"></i></a></li>
-            <li><a href="#"><i className="fab fa.fw fa-instagram"></i></a></li>
-            <li><a href="#"><i className="fab fa.fw fa-whatsapp"></i></a></li>
-            <li><a href="#"><i className="fab fa.fw fa-twitter"></i></a></li>
-        </ul>
-
+      <ul className="social-icons">
+        <li>
+          <a href="https://facebook.com">
+            <i className="fab fa.fw fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com">
+            <i className="fab fa.fw fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://web.whatsapp.com">
+            <i className="fab fa.fw fa-whatsapp"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twiter.com/inicio">
+            <i className="fab fa.fw fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
     </div>
 
-
-
-
-
-
-
-
-
-        // <div className='redessociales'>
-        //     <ul className='redes-list'>
-        //         <li className='list-item'><i class="fab fa-facebook-square"></i></li>
-        //         <li className='list-item'><i class="fab fa-instagram"></i></li>
-        //         <li className='list-item'><i class="fab fa-twitter-square"></i></li>
-        //         <li className='list-item'><i class="fab fa-telegram"></i></li>
-        //     </ul>
-        // </div>
-
-    )
-}
+    // <div className='redessociales'>
+    //     <ul className='redes-list'>
+    //         <li className='list-item'><i class="fab fa-facebook-square"></i></li>
+    //         <li className='list-item'><i class="fab fa-instagram"></i></li>
+    //         <li className='list-item'><i class="fab fa-twitter-square"></i></li>
+    //         <li className='list-item'><i class="fab fa-telegram"></i></li>
+    //     </ul>
+    // </div>
+  );
+};
 
 export default RedesSociales;

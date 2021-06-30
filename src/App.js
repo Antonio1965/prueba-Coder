@@ -1,19 +1,16 @@
 
-import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Footer from './components/Footer';
-import RedeSociales from './components/RedesSociales/RedesSociales';
+import Footer from "./components/Footer";
+import RedeSociales from "./components/RedesSociales/RedesSociales";
+import NavBar1 from "./components/NavBar1";
+import ListProducts from "./components/Products/ListProducts";
 
 function App() {
   return (
     <>
-    <div className="App">
-     <NavBar title='Drone.Co'/>
-     <ItemListContainer greeting='Bienvenidos a la sala de productos!!'/>
-     <RedeSociales/>
-     <Footer autor='Copyright &copy; -Tsutsumi Jose Antonio - Junio 2021.'/>
-    </div>
+      <NavBar1 title="Drone.Co" />
+      <ListProducts />
+      <RedeSociales />
+      <Footer autor="Copyright &copy; -Tsutsumi Jose Antonio - Junio 2021." />
     </>
   );
 }

@@ -1,7 +1,7 @@
 
-const Footer = (props) =>{
+const Footer = ({autor}) =>{
     return(
-<p className='footer'>{props.autor} </p>
+<p className='footer'>{autor} </p>
     )
 }
 

@@ -1,33 +1,48 @@
-.nav{
-    background: var(--color-principal);
-    color: var(--blanco);
-} 
-.imagen-logo{
+.nav {
+  background: var(--color-principal);
+  color: var(--blanco);
+}
+.imagen-logo {
+  float: left;
+  justify-content: end;
+  width: 100px;
+  height: 100px;
+  margin-top: 0px;
+  margin-left: 5px;
+  color: azure;
+  filter: drop-shadow(10px 10px 10px azure);
+}
+.nav-title {
+  display: flex;
+  justify-content: center;
+  font-family: "Fredoka One", cursive;
+  font-size: 3.5rem;
+  letter-spacing: 0.8rem;
+  margin-left: 40px;
+}
+.list-group {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin-left: 60px;
+}
+.list-item {
+  margin-top: 20px;
+  padding-right: 30px;
+}
+a {
+  font-size: 30px;
+  color: var(--blanco);
+}
+.color-carro {
+  color: azure;
+}
 
-    display: flex;
-    flex-direction: row;
-    width: 80px;
-    height: 80px;
-}      
-.title{
-    font-family: "Fredoka One", cursive;
-    font-size: 3.5rem;
-    letter-spacing: 0.8rem;
-
-}
-ul {
-    display: flex;
-    justify-content: center;
-}
-li{
-    margin-top: 20px;
-   padding-right: 30px; 
-}
-a{
-    color: var(--blanco);
-}
-.fa-shopping-cart{
-    margin-left: 50px;
- padding-top: 20px;
-
+@media (max-width: 640px) {
+  a {
+    font-size: 20px;
+  }
+  .imagen-logo {
+    display: none;
+  }
 }
