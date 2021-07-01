@@ -27,14 +27,6 @@ const RedesSociales = () => {
       </ul>
     </div>
 
-    // <div className='redessociales'>
-    //     <ul className='redes-list'>
-    //         <li className='list-item'><i class="fab fa-facebook-square"></i></li>
-    //         <li className='list-item'><i class="fab fa-instagram"></i></li>
-    //         <li className='list-item'><i class="fab fa-twitter-square"></i></li>
-    //         <li className='list-item'><i class="fab fa-telegram"></i></li>
-    //     </ul>
-    // </div>
   );
 };
 

@@ -1,11 +1,11 @@
 import './NavBar.css';
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import logo from "../../src/img/antonio1.svg";
+import {AppBar} from "@material-ui/core";
+import {Toolbar} from "@material-ui/core";
+import {IconButton} from "@material-ui/core";
 import {Badge} from '@material-ui/core';
 import {ShoppingCart} from '@material-ui/icons';
+import logo from "../../src/img/antonio1.svg";
 
 
 const useStyles = makeStyles((theme) => ({
