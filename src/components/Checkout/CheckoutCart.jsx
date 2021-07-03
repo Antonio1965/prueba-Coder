@@ -11,6 +11,8 @@ import { AddShoppingCart } from "@material-ui/icons";
 import DeleteIcon from '@material-ui/icons/Delete';
 import accouting from "accounting";
 import { classDeclaration } from "jest-snapshot/node_modules/@babel/types";
+import { useStateValue } from '../../StateProvider';
+import { actionTypes } from "../../reducer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,10 +41,16 @@ const CheckoutCard = ({
 }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const [{basket}, dispatch] = useStateValue();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  const removeItem = ()=> dispatch({
+    type:actionTypes.REMOVE_ITEM,
+    id:id,
+  })
 
   return (
     <Card className={classes.root}>
@@ -69,7 +77,7 @@ const CheckoutCard = ({
             ))}
         </div>
         <IconButton>
-        <DeleteIcon fontSize='large'/>
+        <DeleteIcon fontSize='large' onClick={removeItem}/>
         </IconButton>
       </CardActions>
     </Card>

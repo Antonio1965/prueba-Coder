@@ -1,7 +1,7 @@
 
 const Footer = ({autor}) =>{
     return(
-<p className='footer'>{autor} </p>
+<footer className='footer'>{autor} </footer>
     )
 }
 
