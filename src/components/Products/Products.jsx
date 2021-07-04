@@ -18,6 +18,7 @@ import { useStateValue } from "../../StateProvider";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    marginLeft: '2rem',
   },
   action: {
     marginTop: "1rem",
