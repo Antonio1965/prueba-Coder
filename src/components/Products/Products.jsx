@@ -71,7 +71,7 @@ const Products = ({
         action={
           <Typography
             className={classes.action}
-            variant="h5"
+            variant="h6"
             color="textSecondary"
           >
             {accouting.formatMoney(price)}

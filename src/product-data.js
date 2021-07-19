@@ -21,7 +21,7 @@ const products = [
     },
     {
         id:3,
-        name: 'Drone-Acuaticos',
+        name: 'Drone-Acuatis',
         productType: 'Drone especiales acuaticos-2021',
         price: 25000,
         rating: 4,
@@ -111,7 +111,7 @@ const products = [
     },
     {
         id:12,
-        name: 'Drone-Fumigacion',
+        name: 'Drone-Fumi',
         productType: 'Drone especiales para uso al campo',
         price: 1500000,
         rating: 6,
@@ -131,7 +131,7 @@ const products = [
     },
     {
         id:14,
-        name: 'Drone-USA-Militar',
+        name: 'Drone-US.',
         productType: 'Drone especiales para uso militar',
         price: 15000000,
         rating: 6,
@@ -141,7 +141,7 @@ const products = [
     },
     {
         id:15,
-        name: 'Drone-War',
+        name:'Drone-W.',
         productType: 'The U.S. Drone War You Dont Know About | HuffPost',
         price: 19000000,
         rating: 6,

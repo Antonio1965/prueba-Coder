@@ -7,8 +7,10 @@ import { IconButton } from "@material-ui/core";
 import { Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import logo from "../../src/img/antonio1.svg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
+import { actionTypes } from "../reducer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +32,25 @@ const useStyles = makeStyles((theme) => ({
 
 const NavBar = ({ title }) => {
   const classes = useStyles();
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  const history = useHistory();
+
+  const handleOut = () =>{
+    if(user){
+      auth.signOut();
+      dispatch({
+        type: actionTypes.EMPTY_BASKET,
+        basket:[],
+      });
+      dispatch({
+        type: actionTypes.SET_USER,
+        user: null,
+      });
+
+      history.push('/')
+
+    }
+  }
 
   return (
     <div className={classes.root}>
@@ -49,13 +69,16 @@ const NavBar = ({ title }) => {
           </Link>
           <div className={classes.grow} />
           <Typography variant="h5" color="azure" component="p">
-            Hello Guest
+            Hello: {user? user.email : 'Guest'}
           </Typography>
+          <Link to='/sign-in'>
           <div className={classes.button}>
-            <Button color='azure'variant= 'outlined'>
-            <strong>Sing In</strong>
+            <Button color='azure'variant= 'outlined' onClick={handleOut}>
+              <Link></Link>
+            <strong>{user? 'Sign Out' : 'Sign In'}</strong>
             </Button>
           </div>
+          </Link>
           <Link to="checkout-page">
             <IconButton aria-label="show cart items" color="inherent">
               <Badge badgeContent={basket?.length} color="secondary">
