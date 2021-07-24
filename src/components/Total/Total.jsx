@@ -19,19 +19,19 @@ const useStyles = makeStyles((theme) => ({
 
 export const Total = () => {
   const classes = useStyles();
-  const [{ basket }, dispatch] = useStateValue();
+  const [{basket}, dispatch] = useStateValue();
 
   return (
     <div className={classes.root}>
       <h5>Total items:{basket?.length}</h5>
-      <h5> {accounting.formatMoney(getBasketTotal )}</h5>
+      <h5> {accounting.formatMoney(getBasketTotal(basket), )}</h5>
       <Link to="/checkout">
         <Button
           className={classes.button}
           variant="contained"
           color="secondary"
         >
-          Check out
+          COMPRAR
         </Button>
       </Link>
     </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card } from "@material-ui/core";
 import { CardHeader } from "@material-ui/core";
@@ -9,10 +8,9 @@ import { IconButton } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
 import { AddShoppingCart } from "@material-ui/icons";
 import DeleteIcon from '@material-ui/icons/Delete';
-import accouting from "accounting";
-import { classDeclaration } from "jest-snapshot/node_modules/@babel/types";
+import accounting from "accounting";;
 import { useStateValue } from '../../StateProvider';
-import { actionTypes } from "../../reducer";
+import {actionTypes}  from "../../reducer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-const CheckoutCard = ({
+export const CheckoutCart = ({
   product: { id, name, productType, image, price, rating, description },
 }) => {
   const classes = useStyles();
@@ -61,7 +59,7 @@ const CheckoutCard = ({
             variant="h5"
             color="textSecondary"
           >
-            {accouting.formatMoney(price)}
+            {accounting.formatMoney(price)}
           </Typography>
         }
         title={name}
@@ -83,4 +81,4 @@ const CheckoutCard = ({
     </Card>
   );
 };
-export default CheckoutCard;
+

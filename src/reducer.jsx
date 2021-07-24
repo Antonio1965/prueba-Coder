@@ -11,11 +11,11 @@ export const actionTypes = {
 }
 
 export const getBasketTotal = (basket)=>{
-   basket?.reduce((acum, item) => item.price + acum, 0) 
+   basket?.reduce((amout, item) => amout + (item.price) , 0) 
 }
-console.log(getBasketTotal);
-const reducer = (state, action) =>{
-    console.log(action);
+
+export const reducer = (state, action) =>{
+   
     switch(action.type){
         case 'ADD_TO_BASKET':
             return {
@@ -49,4 +49,3 @@ const reducer = (state, action) =>{
     }
 }
 
-export default reducer;
