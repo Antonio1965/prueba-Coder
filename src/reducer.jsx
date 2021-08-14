@@ -12,6 +12,7 @@ export const actionTypes = {
 
 export const getBasketTotal = (basket)=>{
    basket?.reduce((amout, item) => amout + (item.price) , 0) 
+   console.log(getBasketTotal);
 }
 
 export const reducer = (state, action) =>{

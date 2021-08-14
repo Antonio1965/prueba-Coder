@@ -10,10 +10,10 @@ import { SignUp } from "./SingUp";
 import { auth } from "./firebase";
 import { actionTypes } from "./reducer";
 import { useStateValue } from "./StateProvider";
-import { Checkout } from "./CheckoutForm/Checkout";
-// import { CheckoutCart} from './components/Checkout/CheckoutCart';
-// import { CheckoutPage } from "./components/Checkout/CheckoutPage";
-// import { Checkout } from './components/CheckoutForm/Checkout';
+// import { Checkout } from "./CheckoutForm/Checkout";
+import { CheckoutCart} from './components/Checkout/CheckoutCart';
+import { CheckoutPage } from "./components/Checkout/CheckoutPage";
+import { Checkout } from './components/CheckoutForm/Checkout';
 
 
 export const App = () => {

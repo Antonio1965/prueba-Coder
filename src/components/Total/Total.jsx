@@ -24,7 +24,7 @@ export const Total = () => {
   return (
     <div className={classes.root}>
       <h5>Total items:{basket?.length}</h5>
-      <h5> {accounting.formatMoney(getBasketTotal(basket), )}</h5>
+      <h5> {accounting.formatMoney(getBasketTotal (basket), )}</h5>
       <Link to="/checkout">
         <Button
           className={classes.button}
